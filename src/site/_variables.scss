@@ -1,0 +1,71 @@
+//== Font
+$font-family-title: 'Impact','SF Pro','Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-default: 'Space Grotesk','SF Pro','Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// ====== font weight =====
+$font-weight-normal: 400;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 600;
+
+// ====== font size======
+$font-xl: 42px;
+$font-l: 24px;
+$font-ml: 18px;
+$font-m: 16px;
+$font-s: 12px;
+
+// ====== colors======
+$dark-gray: rgba(0,0,0,0.90);
+$gray: rgba(0,0,0,0.70);
+$light-gray: rgba(0, 0, 0, 0.40);
+$very-light-gray: #DDD;
+$background-color: #eee;
+$orange: #B85813;
+$dark-orange: #BE5509;
+$hovered-button: #9D4D13;
+$white: #fff;
+$error: #D62424;
+$light-error: rgba(236, 51, 51, 0.05);
+$primary: $orange;
+$dark-primary: $dark-gray;
+$black: #000;
+$option-background: #F1F1F1;
+$background-secondary: #2C2C2C;
+$light-secondary: #5E5E5E;
+$light-text: #333; 
+$focus-light: #1D9AE0;
+$focus-dark: #1A8DD1;
+
+$focus-border: 2px $focus-light solid;
+$error-outline: 2px $error solid;
+$border-error: 1px $error solid;
+
+$border-default: 1px solid rgba(0, 0, 0, 0.15);
+$new-light-gray: #949494;
+$new-border-light: 1px solid $new-light-gray;
+$background-default: rgba(0, 0, 0, 0.05);
+$disabled-color: $background-default;
+$background-hover: rgba(255, 255, 255, 0.01);
+$box-shadow-default: 1px 1.5px 4px 0px rgba(0, 0, 0, 0.10) inset, 1px 1.5px 4px 0px rgba(0, 0, 0, 0.08) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.25) inset, 0px -0.5px 1px 0px rgba(255, 255, 255, 0.30) inset;
+$background-tab: linear-gradient(0deg, #F5F5F5 0%, #F5F5F5 100%), #FFF;
+$box-shadhow-hover: 0px 3px 12px #00000033;
+
+
+
+// ====== space ======
+$space-xs: 6px;
+$space-s: 12px;
+$space-sm: 20px;
+$space-m: 24px;
+$space-l: 48px;
+$space-xl: 144px;
+
+$field-radius: 6px;
+$button-radius: 8px;
+$tap-height: 52px;
+$field-height: 44px;
+
+
+//== Grid
+
+$max_col: 12;

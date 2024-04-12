@@ -1,0 +1,78 @@
+.cmp-accordion {
+  @include container;
+  @include description;
+
+  &__item {
+    opacity: 1;
+    border: 1px solid $very-light-gray;
+    &[data-cmp-expanded] {
+      background-color: $white;
+    }
+  }
+
+  &__header {
+    display: flex;
+    background: $background-tab;
+    position: relative;
+  }
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__label {
+    @include panel-label;
+  }
+
+  &__button {
+    @include tab;
+    flex: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border: none;
+    margin-inline-end: unset;
+    cursor: pointer;
+    font-weight: $font-weight-bold;
+    padding-inline: 0;
+
+    &:hover {
+      color: $dark-gray;
+    }
+
+    &--expanded {
+      color: $primary;
+      border-color: $dark-gray;
+
+      &:hover {
+        color: $primary;
+        border-color: $dark-gray;
+      }
+    }
+  }
+
+  &__button &__icon {
+      display: inline-block;
+      background: url(./resources/images/chevron-right2.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 $space-s ;
+      height: 14px;
+      width: 14px;
+      background-color: $very-light-gray;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .cmp-accordion__button.cmp-accordion__button--expanded &__icon {
+    background: url(./resources/images/chevron-right-white2.svg); 
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include repeatability-buttons-layout;
+  @include repeatability-buttons;
+}

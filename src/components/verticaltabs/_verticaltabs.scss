@@ -1,0 +1,73 @@
+.cmp-verticaltabs{
+    font-size: $font-m;
+    margin: $space-s;
+    position: relative;
+
+  &__label {
+    @include panel-label;
+  }  
+  
+  &__tabs-container{
+    display: flex;
+    margin-top: 16px;
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__tabpanel{
+    @include tab-panel;
+    border-inline-start: none ;
+    flex:1;
+  }
+  
+  &__tablist{
+    @media(min-width: 768px) {
+      max-width: 184px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: $white;
+      border: 1px solid $very-light-gray;
+      border-inline-end: none;
+    }
+    @media(max-width: 768px) {
+      @include tab-list;
+    }
+    padding: 0;
+  }
+
+  &__tab {
+    cursor: pointer;
+    @include tab;
+    @media(min-width: 768px) {
+      padding-block: 0 0;
+      padding-inline: $space-s $space-m;
+      border: 1px solid $very-light-gray;
+
+      &--active,&--active:hover {
+        color: $dark-orange;
+        background: none;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        border-inline-end: none;
+        border-block: none;
+      }
+    }
+    
+  }
+
+  @media(max-width: 768px) {
+    @include tab-customizations(".cmp-verticaltabs","end-end","end-start");    
+  }
+  @media(min-width: 768px) {
+    @include tab-customizations(".cmp-verticaltabs","end-end","start-end");   
+  }
+  
+  @include description;
+}

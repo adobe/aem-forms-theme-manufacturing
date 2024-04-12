@@ -1,0 +1,19 @@
+.cmp-adaptiveform-datepicker{
+  @include input;
+
+  &__widget::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(./resources/images/date-picker.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+}
+.datepicker-calendar-icon{
+  top: 38px;
+}

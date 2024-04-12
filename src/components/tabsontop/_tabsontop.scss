@@ -1,0 +1,28 @@
+.cmp-tabs {
+  @include container;
+
+  &__label-container {
+    margin-bottom: $space-s;
+  }
+
+  &__label {
+    @include panel-label;
+  }
+
+  @include description;
+
+  &__tablist {
+    @include tab-list;
+  }
+
+  &__tab {
+    @include tab;
+  }
+
+  @include tab-customizations(".cmp-tabs","end-end","end-start");
+
+  &__tabpanel {
+    @include tab-panel;
+    border-block-start: none;
+  }
+}
