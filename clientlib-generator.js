@@ -25,7 +25,7 @@ clientlib(
       assets: {
         resources: {
           base: "css/resources/images",
-          files: ["dist/**/*.svg", "dist/**/*.gif", "dist/**/*.png"]
+          files: ["dist/**/*.svg", "dist/**/*.gif", "dist/**/*.png", "dist/**/*.jpg", "dist/**/*.jpeg"]
         },
         js: [
           { src: "dist/theme.js", dest: "theme.js" },
