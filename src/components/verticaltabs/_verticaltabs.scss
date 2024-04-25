@@ -23,6 +23,9 @@
     @include tab-panel;
     border-inline-start: none ;
     flex:1;
+    @media(max-width: 768px) {
+      border-block-start: none;
+    }
   }
   
   &__tablist{
