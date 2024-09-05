@@ -31,6 +31,10 @@
     @include list-container;
   }
 
+  &__dragtext {
+    display: none;
+  }
+
   &__fileitem {
     @include list-item;
     justify-content: space-between;
@@ -53,9 +57,11 @@
     font-size: $font-m;
     text-transform: uppercase;
     line-height: 1;
-    font-weight: 500;
+    font-weight: $font-weight-semi-bold;
     color: $error;
     cursor: pointer;
+    border: none;
+    background: none;
   }
 
   [dir='rtl'] &__filedelete {

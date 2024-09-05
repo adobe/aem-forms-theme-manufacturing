@@ -1,10 +1,14 @@
 .cmp-verticaltabs{
     font-size: $font-m;
-    margin: $space-s;
     position: relative;
+    @include layout-settings;
 
   &__label {
     @include panel-label;
+    margin-inline-start: $space-s;
+    @media(max-width: 768px) {
+      margin-inline-start: $space-m;
+    }
   }  
   
   &__tabs-container{
@@ -21,8 +25,9 @@
 
   &__tabpanel{
     @include tab-panel;
-    border-inline-start: none ;
+    border: none;
     flex:1;
+    @include layout-panel-adjustments;
     @media(max-width: 768px) {
       border-block-start: none;
     }
@@ -35,8 +40,7 @@
       padding: 0;
       margin: 0;
       background-color: $white;
-      border: 1px solid $very-light-gray;
-      border-inline-end: none;
+      border:none;
     }
     @media(max-width: 768px) {
       @include tab-list;
@@ -48,9 +52,12 @@
     cursor: pointer;
     @include tab;
     @media(min-width: 768px) {
-      padding-block: 0 0;
       padding-inline: $space-s $space-m;
       border: 1px solid $very-light-gray;
+      text-wrap: wrap;
+      height: unset;
+      padding-block: 0.5rem;
+      max-height: 6rem;
 
       &--active,&--active:hover {
         color: $dark-orange;
@@ -58,8 +65,7 @@
         background-color: $white;
         display: flex;
         align-items: center;
-        border-inline-end: none;
-        border-block: none;
+        border: none;
       }
     }
     

@@ -31,13 +31,6 @@
     pointer-events: none;
   }
 
-  // remove this code
-  &.cmp-tabs,
-  &.cmp-adaptiveform-wizard,
-  &.cmp-accordion {
-    margin: $space-l 0;
-  }
-
 }
 
 @mixin required-field-style {
@@ -81,11 +74,15 @@
   font-weight: $font-weight-normal;
   color: $dark-gray;
   opacity: 1;
-  margin-top: 0;
-  margin-bottom: $space-s;
+  margin-block: $space-l $space-s;
   position: static;
   font-family: $font-family-title;
-  text-transform: uppercase;
+  margin-inline: $desktop-standard-padding;
+
+  @media (max-width: 480px) {
+    margin-inline: $mobile-standard-padding;
+    margin-block: $space-m $space-s;
+  }
 }
 
 @mixin widget {
@@ -229,6 +226,7 @@
 // input contains the container, label, widget, description, error
 @mixin input {
   @include container;
+  @include field-settings;
 
   &__label {
     @include label;
@@ -246,6 +244,17 @@
 
   &__errormessage {
     @include error-message
+  }
+
+}
+
+@mixin field-settings {
+  background-color: $white;
+  padding-inline: $desktop-standard-padding;
+  padding-block: $space-m $space-s;
+  @media (max-width: 480px) {
+    padding-block: $space-m;
+    padding-inline: $mobile-standard-padding;
   }
 }
 
@@ -279,7 +288,7 @@
     opacity: 50%;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     width: fit-content;
   }
 }
@@ -303,7 +312,7 @@
   opacity: 1;
   font-family: $font-family-default;
 
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     width: fit-content;
   }
 }
@@ -339,8 +348,7 @@
   overflow: auto;
   padding: 0;
   background-color: $white;
-  border: 1px solid $very-light-gray;
-  border-bottom: none;
+  border: none;
 }
 
 @mixin tab {
@@ -369,8 +377,7 @@
     background-color: $white;
     display: flex;
     align-items: center;
-    border-block-end: none;
-    border-inline: none;
+    border: none;
   }
 
   &--active::after {
@@ -382,15 +389,32 @@
 }
 
 @mixin tab-panel {
-  padding: $space-l;
+  padding-block-end: $space-l;
   border: 1px solid rgba(0, 0, 0, 0.20);
   background: $white;
   box-shadow: 0px 28px 44px 0px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 480px) {
-    padding-block: $space-l;
-    padding-inline: $space-m;
-    width: 100%;
+    padding-block-start: $mobile-standard-padding;
+  }
+}
+
+@mixin layout-panel-adjustments {
+  >.panelcontainer>[data-cmp-is="adaptiveFormPanel"] {
+    margin-block-start: $space-l;
+    margin-inline: $space-l;
+    @media (max-width: 480px) {
+      margin-inline: $mobile-standard-padding;
+      margin-block-start: $space-m;
+    }
+  }
+}
+
+@mixin layout-settings {
+  background-color: $white;
+  padding-inline: $space-l;
+  @media (max-width: 480px) {
+    padding-inline: $space-s;
   }
 }
 
@@ -444,7 +468,7 @@
     position: static;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 480px) {
     width: 50%;
   }
 }
@@ -465,7 +489,7 @@
     position: static;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 480px) {
     width: 50%;
   }
 }
@@ -511,10 +535,6 @@
     align-items: center;
     background: transparent;
     gap: 5px;
-    position: absolute;
-    inset-inline-start: 101%;
-    top: 0;
-    bottom: 0;
   }
 
 }
@@ -579,5 +599,4 @@ div[data-cmp-is="adaptiveFormRadioButton"],
 div[data-cmp-is="adaptiveFormEmailInput"],
 div[data-cmp-is="adaptiveFormTelephoneInput"] {
   border: none;
-  margin: $space-s 0;
 }

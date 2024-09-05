@@ -1,17 +1,19 @@
 .cmp-adaptiveform-wizard {
   @include container;
+  @include layout-settings;
 
   &__widget {
-    border: 1px solid rgba(0, 0, 0, 0.20);
+    border: none;
     background-color: $white;
   }
 
   &__label-container {
-    margin-bottom: $space-s;
+    margin-block-end: $space-s;
   }
 
   &__label {
     @include panel-label;
+    margin-inline-start: $space-m;
   }
 
   @include description;
@@ -37,7 +39,21 @@
 
   &__wizardpanel {
     @include tab-panel;
-    border-top: none;
+    padding-block-end: $space-m*3;
+    border: none;
+    @media (max-width: 480px) {
+      
+    }
+    >[data-cmp-is="adaptiveFormPanel"]{
+      margin-block-start: $space-l;
+      margin-inline: $space-l;
+      margin-block-end: 0;
+      @media (max-width: 480px) {
+        margin-inline: $mobile-standard-padding;
+        margin-block-start: $space-m;
+      }
+    }
+    
   }
 
   &__previousNav {
@@ -52,8 +68,11 @@
     justify-content: end;
     gap: $space-s;
     position: absolute;
-    width: 100%;
-    inset-block-end: -80px;
+    inset-block-end: 0;
+    inset-inline-end: 2*$space-l;
+    @media (max-width: 480px) {
+      inset-inline: $space-m;
+    }
   }
 
   &__nav {

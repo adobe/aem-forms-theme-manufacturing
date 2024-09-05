@@ -1,8 +1,12 @@
 .cmp-adaptiveform-button {
   position: relative;
   border: none;
-  margin: $space-s 0;
+  @include field-settings;
   @include container;
+
+  &__help-container {
+    position: relative;
+  }
 
   &__widget:not(.reset .cmp-adaptiveform-button__widget) {
     @include primary-button;
@@ -11,27 +15,21 @@
 
   @include description;
   &__shortdescription, &__longdescription{
-    margin-top: 8px;
+    margin-block-start: 8px;
   }
-  &__questionmark{
-    @media (max-width: 640px) {
-      top: -20px;
+  &__questionmark {
+    @media (max-width: 480px) {
+      inset-block-start: -20px;
     }
-  }
-  @media (max-width: 640px) {
-    margin-top: 32px;
   }
 }
 
 .submit {
-  position: sticky;
   border-radius: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0) 100%);
   width: 100%;
-  bottom: 0;
-  left: 0;
   z-index: 12;
   .cmp-adaptiveform-button {
+    padding-block-end: $desktop-standard-padding;
     &__widget {
       padding: 0 $space-m;
     }

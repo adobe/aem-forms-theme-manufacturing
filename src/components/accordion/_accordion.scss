@@ -1,6 +1,7 @@
 .cmp-accordion {
   @include container;
   @include description;
+  @include layout-settings;
 
   &__item {
     opacity: 1;
@@ -22,6 +23,7 @@
 
   &__label {
     @include panel-label;
+    margin-inline-start: 0;
   }
 
   /* Parent selector included to avoid style from being overridden in few cases*/

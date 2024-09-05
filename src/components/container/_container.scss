@@ -7,7 +7,7 @@
     padding: $space-s;
     padding-inline: 20%;
     @media(max-width: 768px) {
-      padding-inline: $space-s;
+      padding-inline: 0;
     }
   }
 

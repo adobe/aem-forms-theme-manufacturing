@@ -1,12 +1,21 @@
 .cmp-adaptiveform-checkboxgroup {
   @include container;
+  
+  @include field-settings;
 
   &__label {
     @include label;
   }
 
+  &:focus-within:not([data-cmp-enabled=false]) &__label-container &__label {
+    color: $focus-dark;
+  }
+
   &-item {
     @include list-item;
+    &:focus-within:not([data-cmp-enabled=false]) {
+      border: $focus-border;      
+    }
   }
 
   &[data-cmp-enabled=true] &-item,&[data-cmp-enabled=true] &__option-label {
@@ -24,6 +33,9 @@
       & .cmp-adaptiveform-checkboxgroup-item {
         border: 1px solid $very-light-gray;
       }
+    }
+    &:focus:not([disabled]) {
+      border: $focus-border;
     }
   }
 

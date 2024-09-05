@@ -3,9 +3,13 @@ html,
 html body {
   color: $dark-gray;
   font-size: $font-m;
-  background: url(./resources/images/background.jpg) no-repeat center center fixed;
+  background: url(resources/images/background.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   font-family: $font-family-default;
-
+  margin: 0;
 }
 
 *,*:before,*:after {

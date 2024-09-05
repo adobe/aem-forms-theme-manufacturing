@@ -1,3 +1,13 @@
 .cmp-adaptiveform-numberinput{
   @include input;
+
+  &__widget {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      transform: rotate(90deg);
+      height: 80px;
+      opacity: 0;
+    }
+  }
+  
 }
