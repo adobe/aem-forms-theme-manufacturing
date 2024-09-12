@@ -3,5 +3,8 @@
   color: $dark-gray;
   font-weight: $font-weight-normal;
   font-family: $font-family-title;
-  text-transform: uppercase;
+
+  @media (max-width: 640px) {
+    font-size: $font-l;
+  }
 }

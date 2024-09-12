@@ -1,5 +1,6 @@
 .cmp-tabs {
   @include container;
+  @include layout-settings;
 
   &__label-container {
     margin-bottom: $space-s;
@@ -7,6 +8,7 @@
 
   &__label {
     @include panel-label;
+    margin-inline-start: $space-m;
   }
 
   @include description;
@@ -23,6 +25,7 @@
 
   &__tabpanel {
     @include tab-panel;
-    border-block-start: none;
+    border: none;
+    @include layout-panel-adjustments;    
   }
 }

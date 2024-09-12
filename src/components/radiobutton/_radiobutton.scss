@@ -1,7 +1,14 @@
 .cmp-adaptiveform-radiobutton {
   @include container;
+  @include field-settings;
+
   &__label {
     @include label;
+  }
+
+
+  &:focus-within:not([data-cmp-enabled=false]) &__label-container &__label {
+      color: $focus-dark;
   }
 
   &__widget {
@@ -35,6 +42,9 @@
       align-items: center;
       width: 100%;
     }
+    &:focus-within:not([data-cmp-enabled=false]) {
+      border: $focus-border;      
+    }
   }
 
   &[data-cmp-enabled=true] &__option,&[data-cmp-enabled=true] &__option-label {
@@ -45,20 +55,14 @@
   }
 
   &__option__widget {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.1rem;
+    width: 1.1rem;
     cursor: pointer;
-    outline: none;
-  }
-
-  &__option__widget {
     outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    height: 1rem;
-    width: 1rem;
     appearance: none;
     margin: 0;
     border: 1px solid $black;
@@ -66,8 +70,8 @@
     border-radius: 1rem;
 
     &:checked {
-      background-color: $white;
-      border: 2px solid $primary;
+      background-color: $primary;
+      border: none;
       &+ span {
         font-weight: $font-weight-semi-bold;
       }

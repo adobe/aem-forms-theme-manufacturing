@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-block-start: $space-m;
 
   &__text {
     padding: $space-s;
