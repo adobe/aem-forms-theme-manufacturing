@@ -6,7 +6,7 @@
 
   &[data-cmp-is="adaptiveFormPanel"] {
     @include tab-panel;
-    margin: 0 0 $space-l 0;
+    margin: $desktop-standard-padding 0 $space-l 0;
   }
 
   &__label-container {

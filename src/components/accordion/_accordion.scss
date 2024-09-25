@@ -26,6 +26,12 @@
     margin-inline-start: 0;
   }
 
+  &__panel {
+    &>.panelcontainer>[data-cmp-is="adaptiveFormPanel"] {
+      margin-block-start: 0;
+    }
+  }
+
   /* Parent selector included to avoid style from being overridden in few cases*/
   &__header &__button {
     @include tab;
