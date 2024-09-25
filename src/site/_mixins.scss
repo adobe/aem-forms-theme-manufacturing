@@ -398,6 +398,14 @@
   @media (max-width: 480px) {
     padding-block-start: $mobile-standard-padding;
   }
+
+  & .panelcontainer>[data-cmp-is="adaptiveFormPanel"] {
+    margin-inline: $desktop-standard-padding;
+
+    @media(max-width: 480px) {
+      margin-inline: $mobile-standard-padding;
+    }
+  }
 }
 
 @mixin layout-panel-adjustments {
