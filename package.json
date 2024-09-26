@@ -1,5 +1,5 @@
 {
-    "name": "aem-forms-manufacturing-theme",
+    "name": "@aemforms/af-manufacturing-theme",
     "version": "0.0.1",
     "description": "Standard AEM Forms Manufacturing theme",
     "license": "MIT License, Copyright 2022 Adobe Systems Incorporated",
