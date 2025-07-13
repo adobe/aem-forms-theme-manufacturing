@@ -19,6 +19,7 @@
 
   &__tablist &__tab {
     @include tab;
+    color: $light-secondary;
   }
 
   @include tab-customizations(".cmp-tabs","end-end","end-start");

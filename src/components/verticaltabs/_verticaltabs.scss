@@ -47,6 +47,11 @@
     }
     padding: 0;
   }
+  
+  &__tablist &__tab {
+    @include tab;
+    color: $light-secondary;
+  }
 
   &__tab {
     cursor: pointer;
