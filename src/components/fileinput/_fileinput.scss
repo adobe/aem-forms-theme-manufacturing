@@ -31,6 +31,10 @@
     @include list-container;
   }
 
+  &__filename{
+    color: $file-name;
+  }
+
   &__dragtext {
     display: none;
   }
