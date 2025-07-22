@@ -237,7 +237,7 @@
   }
 
   &:focus-within:not([data-cmp-enabled=false]) &__label-container &__label {
-    color: $focus-dark;
+    color: $focus;
   }
 
   @include description;
